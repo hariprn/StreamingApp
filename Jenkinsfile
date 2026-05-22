@@ -111,14 +111,28 @@ pipeline {
 
     post {
 
-        success {
+    	success {
+	
+       		 sh '''
+       		 aws sns publish \
+       		 --topic-arn arn:aws:sns:ap-south-1:610405653088:streamingapp-alerts \
+       		 --subject "Jenkins Pipeline Success" \
+       		 --message "StreamingApp deployment completed successfully."
+       		 '''
 
-            echo 'Deployment Successful!'
-        }
+       		 echo 'Deployment Successful!'
+    	}
 
-        failure {
+    	failure {
 
-            echo 'Pipeline Failed!'
-        }
+       		 sh '''
+       		 aws sns publish \
+       		 --topic-arn arn:aws:sns:ap-south-1:610405653088:streamingapp-alerts \
+       		 --subject "Jenkins Pipeline Failed" \
+       		 --message "StreamingApp deployment failed. Check Jenkins logs."
+       		 '''
+
+       		 echo 'Pipeline Failed!'
+    	}
     }
 }
