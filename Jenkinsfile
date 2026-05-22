@@ -22,7 +22,7 @@ pipeline {
 
             steps {
 
-                git branch: 'main',
+                git branch: 'dev',
                 url: 'https://github.com/hariprn/StreamingApp.git'
             }
         }
