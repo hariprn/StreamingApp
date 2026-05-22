@@ -38,9 +38,8 @@ The entire infrastructure and deployment workflow was implemented and validated 
 14. CI/CD Pipeline Workflow
 15. Application Validation
 16. Challenges Faced and Solutions
-17. Screenshots
-18. Future Improvements
-19. Conclusion
+17. Future Improvements
+18. Conclusion
 
 ---
 
@@ -68,6 +67,8 @@ Microservices:
 - Admin Service
 - Chat Service
 - MongoDB Database
+
+![ECR Repositories](screenshots/Architecture.png)
 
 ---
 
@@ -239,9 +240,9 @@ docker ps
 
 Docker containers running:
 
-```markdown
+
 ![Docker Containers](screenshots/docker-containers.png)
-```
+
 
 ---
 
@@ -279,9 +280,9 @@ aws sts get-caller-identity
 
 ECR repositories:
 
-```markdown
+
 ![ECR Repositories](screenshots/ecr-repositories.png)
-```
+
 
 ---
 
@@ -330,21 +331,20 @@ Frontend was exposed using LoadBalancer service.
 
 Kubernetes Pods:
 
-```markdown
+
 ![Kubernetes Pods](screenshots/k8s-pods.png)
-```
+
 
 Kubernetes Services:
 
-```markdown
+
 ![Kubernetes Services](screenshots/k8s-services.png)
-```
+
 
 Frontend Application:
 
-```markdown
 ![Frontend Application](screenshots/frontend-app.png)
-```
+
 
 ---
 
@@ -378,9 +378,9 @@ helm list -n streamingapp
 
 Helm deployment:
 
-```markdown
+
 ![Helm Deployment](screenshots/helm-deployment.png)
-```
+
 
 ---
 
@@ -419,9 +419,9 @@ kubectl get hpa -n streamingapp
 
 HPA Metrics:
 
-```markdown
+
 ![HPA Metrics](screenshots/hpa-metrics.png)
-```
+
 
 ---
 
@@ -460,15 +460,14 @@ CloudWatch Container Insights displayed:
 
 CloudWatch Dashboard:
 
-```markdown
 ![CloudWatch Dashboard](screenshots/cloudwatch-dashboard.png)
-```
+
 
 Cluster Metrics:
 
-```markdown
+
 ![Cluster Metrics](screenshots/cloudwatch-metrics.png)
-```
+
 
 ---
 
@@ -534,15 +533,15 @@ post {
 
 SNS Topic:
 
-```markdown
+
 ![SNS Topic](screenshots/sns-topic.png)
-```
+
 
 SNS Email Alert:
 
-```markdown
+
 ![SNS Email Alert](screenshots/sns-email-alert.png)
-```
+
 
 ---
 
@@ -571,15 +570,15 @@ Code Push
 
 GitHub Webhook:
 
-```markdown
+
 ![GitHub Webhook](screenshots/github-webhook.png)
-```
+
 
 Jenkins Pipeline:
 
-```markdown
+
 ![Jenkins Pipeline](screenshots/jenkins-pipeline.png)
-```
+
 
 ---
 
@@ -610,9 +609,9 @@ SNS Notifications
 
 Successful Pipeline:
 
-```markdown
+
 ![Pipeline Success](screenshots/pipeline-success.png)
-```
+
 
 ---
 
@@ -741,34 +740,7 @@ Recreated subscription and confirmed email successfully.
 
 ---
 
-# 17. Screenshots
-
-Store all screenshots inside:
-
-```bash
-screenshots/
-```
-
-Recommended screenshots:
-
-- docker-containers.png
-- ecr-repositories.png
-- k8s-pods.png
-- k8s-services.png
-- frontend-app.png
-- helm-deployment.png
-- hpa-metrics.png
-- cloudwatch-dashboard.png
-- cloudwatch-metrics.png
-- sns-topic.png
-- sns-email-alert.png
-- github-webhook.png
-- jenkins-pipeline.png
-- pipeline-success.png
-
----
-
-# 18. Future Improvements
+# 17. Future Improvements
 
 Possible future improvements:
 
@@ -784,7 +756,7 @@ Possible future improvements:
 
 ---
 
-# 19. Conclusion
+# 18. Conclusion
 
 This project successfully implemented a complete production-style DevOps workflow for a MERN microservices application using AWS cloud services.
 
